@@ -16,24 +16,27 @@ const Weather: FC<WeatherProps> = ({ data }) => {
         </h1>
         <div className="level" style={{ alignItems: 'flex-start' }}>
           <div className="level-item has-text-centered">
+            <div>
+
             <p className="heading">{data.weather[0].description}</p>
             <p className="title">
               <img
                 src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
                 alt=""
-              />
+                />
             </p>
+                </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">temp</p>
               <div className="title">
-                <p className="mb-2">{data.main.temp}</p>
+                <p className="mb-2">{data.main.temp}K</p>
                 <p className="mb-2">
-                  {fahrenheit} <sup>$#8457</sup>
+                  {fahrenheit} <sup>&#8457;</sup>
                 </p>
                 <p className="mb-2">
-                  {celsius} <sup>$#8457</sup>
+                  {celsius} <sup>&#8451;</sup>
                 </p>
               </div>
             </div>
@@ -45,12 +48,16 @@ const Weather: FC<WeatherProps> = ({ data }) => {
             </div>
           </div>
           <div className="level-item has-text-centered">
-            <p className="heading">Pressure</p>
-            <p className="title">{data.main.pressure}</p>
+            <div>
+              <p className="heading">Pressure</p>
+              <p className="title">{data.main.pressure}</p>
+            </div>
           </div>
           <div className="level-item has-text-centered">
-            <p className="heading">wind</p>
-            <p className="title">{data.wind.speed}</p>
+            <div>
+              <p className="heading">wind</p>
+              <p className="title">{data.wind.speed}</p>
+            </div>
           </div>
         </div>
       </div>
