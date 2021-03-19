@@ -6,10 +6,9 @@ interface AlertProps {
 }
 
 const Alert: FC<AlertProps> = ({ message, onClose }) => {
-  const onClick = () => {};
   return (
     <div className='modal is-active has-text-centered'>
-      <div className='modal-background' onClick={onClick}></div>
+      <div className='modal-background' onClick={onClose}></div>
       <div className='modalcard'>
         <header className='modal-card-head has-background-danger'>
           <p className='modal-card-title has-text-white'>{message}</p>
