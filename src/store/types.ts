@@ -1,4 +1,4 @@
-import { Weather, WeatherData } from './types';
+// import { Weather, WeatherData } from './types';
 export const GET_WEATHER = 'GET_WEATHER';
 export const SET_LOADING = 'SET_LOADING';
 export const SET_ERROR = 'SET_ERROR';
